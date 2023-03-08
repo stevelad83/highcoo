@@ -5,15 +5,18 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { UserProvider } from './context/UserContext';
 import { BrowserRouter } from 'react-router-dom';
+import { PoemsProvider } from './context/PoemsContext.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <UserProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </UserProvider>
+    <BrowserRouter>
+      <UserProvider>
+        <PoemsProvider>
+          <App />
+        </PoemsProvider>
+      </UserProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

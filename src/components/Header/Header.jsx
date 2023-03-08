@@ -9,6 +9,7 @@ export default function Header() {
     try {
       await signOut();
       setUser(null);
+      console.log('user', user);
     } catch (error) {
       console.error(error.message);
     }

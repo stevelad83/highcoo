@@ -5,11 +5,11 @@
 }
 
 body {
-  --color1: ;
-  --color2: ;
-  --color3: ;
-  --color4: ;
-  --color5: ;
+  --color1: dodgerblue;
+  --color2: #ff7b00;
+  --color3: #ff7b00;
+  --color4: #ffb700;
+  --color5: green;
   background-color: var();
   color: var();
   cursor: default;

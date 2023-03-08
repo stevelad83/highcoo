@@ -12,7 +12,7 @@ const PoemsProvider = ({ children }) => {
     const fetchPoems = async () => {
       try {
         const data = await getPoems();
-        console.log(data);
+        // console.log(data);
         setPoems(data);
       } catch (e) {
         console.error(e.message);

@@ -6,9 +6,9 @@
 
 body {
   --color1: dodgerblue;
-  --color2: #ff7b00;
-  --color3: #ff7b00;
-  --color4: #ffb700;
+  --color2: #0d0c48;
+  --color3: #f4ecdf;
+  --color4: #68cc8b;
   --color5: green;
   background-color: var();
   color: var();

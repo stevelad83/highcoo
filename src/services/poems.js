@@ -2,11 +2,11 @@ import { checkError, client } from './client.js';
 
 export async function getPoems() {
   const response = await client.from('poems').select();
-  //   console.log('response.data', response.data);
   return checkError(response);
 }
 
-export async function createHaiku(haiku) {
-  const response = await client.from('poems').insert(haiku);
+export async function createHaiku(fiveLine, sevenLine, finalFive) {
+  const response = await client.from('poems').insert({ fiveLine, sevenLine, finalFive }).single();
+  console.log('response.data', response.data);
   return checkError(response);
 }

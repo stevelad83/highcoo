@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { PoemsContext } from '../context/PoemsContext.js';
+import { PoemsContext } from '../../context/PoemsContext.js';
 import './PoemsList.css';
 
 export default function PoemsList() {
@@ -11,7 +11,7 @@ export default function PoemsList() {
       <div className="poems-list">
         {poems.map((poem) => (
           <a key={poem.id}>
-            <ul>
+            <ul className="list">
               <li>{poem.fiveLine}</li>
               <li>{poem.sevenLine}</li>
               <li>{poem.finalFive}</li>
@@ -19,7 +19,9 @@ export default function PoemsList() {
           </a>
         ))}
       </div>
-      <Link to="/form">Write a Haiku</Link>
+      <Link to="/form" className="write-haiku">
+        Write a Haiku
+      </Link>
     </>
   );
 }

@@ -1,9 +1,9 @@
 import { Redirect, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Auth from './components/Auth/Auth';
-import Form from './components/Form.js';
+import Form from './components/Form/Form.js';
 import Header from './components/Header/Header';
-import Home from './components/Home.jsx';
+import Home from './components/Home/Home.jsx';
 import { useUser } from './context/UserContext.js';
 
 function App() {

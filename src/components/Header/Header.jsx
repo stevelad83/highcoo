@@ -9,6 +9,7 @@ export default function Header() {
     try {
       await signOut();
       setUser(null);
+      history.pushState('/');
     } catch (error) {
       console.error(error.message);
     }

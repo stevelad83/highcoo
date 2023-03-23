@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
-import { PoemsContext } from '../context/PoemsContext.js';
-import { createHaiku } from '../services/poems.js';
+import { PoemsContext } from '../../context/PoemsContext.js';
+import { createHaiku } from '../../services/poems.js';
 import './Form.css';
 
 import { useHistory } from 'react-router-dom';

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
 import { useUser } from '../context/UserContext.js';
-import Form from './Form.js';
 import PoemsList from './PoemsList.js';
 
 export default function Home() {
@@ -13,7 +12,6 @@ export default function Home() {
     <div>
       <p>Here Haiku Here</p>
       <PoemsList />
-      <Form />
     </div>
   );
 }

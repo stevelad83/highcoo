@@ -2,6 +2,9 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { PoemsContext } from '../../context/PoemsContext.js';
 import './PoemsList.css';
+import { syllable } from 'syllable';
+
+console.log(syllable('expensively'));
 
 export default function PoemsList() {
   const { poems } = useContext(PoemsContext);

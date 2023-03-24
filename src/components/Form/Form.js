@@ -4,6 +4,7 @@ import { createHaiku } from '../../services/poems.js';
 import './Form.css';
 
 import { useHistory } from 'react-router-dom';
+import { checkLine, wordCount } from '../Count/Count.js';
 
 export default function Form() {
   const history = useHistory();
@@ -17,6 +18,11 @@ export default function Form() {
 
   const handleCreatePoem = async (e) => {
     e.preventDefault();
+    const lineOne = e.target[0].value;
+    const lineTwo = e.target[0].value;
+    const lineThree = e.target[0].value;
+    console.log(checkLine(lineOne));
+
     try {
       const input = await createHaiku(lineOne, lineTwo, lineThree);
       setHaiku(input);

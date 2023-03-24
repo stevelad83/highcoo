@@ -4,6 +4,7 @@ li {
 
 .poems-list {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .write-haiku {

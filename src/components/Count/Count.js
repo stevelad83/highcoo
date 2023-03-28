@@ -35,6 +35,7 @@ export function checkHaiku(a, b, c) {
 export function arrayCompare(a1, a2) {
   return (
     a1.length === a2.length &&
+    // eslint-disable-next-line space-before-function-paren
     a1.every(function (v, i) {
       return v === a2[i];
     })

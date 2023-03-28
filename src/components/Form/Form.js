@@ -4,7 +4,7 @@ import { createHaiku } from '../../services/poems.js';
 import './Form.css';
 
 import { useHistory } from 'react-router-dom';
-import { checkLine, wordCount } from '../Count/Count.js';
+import { checkHaiku, checkLine, wordCount } from '../Count/Count.js';
 
 export default function Form() {
   const history = useHistory();
@@ -19,9 +19,15 @@ export default function Form() {
   const handleCreatePoem = async (e) => {
     e.preventDefault();
     const lineOne = e.target[0].value;
-    const lineTwo = e.target[0].value;
-    const lineThree = e.target[0].value;
+    const lineTwo = e.target[1].value;
+    const lineThree = e.target[2].value;
     console.log(checkLine(lineOne));
+    console.log(checkLine(lineTwo));
+    console.log(checkLine(lineThree));
+    if (checkHaiku(lineOne, lineTwo, lineThree) === false) {
+      // Form.reset();
+      return alert('Haikus must have 5/7/5 syllables!');
+    }
 
     try {
       const input = await createHaiku(lineOne, lineTwo, lineThree);

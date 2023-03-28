@@ -25,6 +25,9 @@ export default function Form() {
     console.log(checkLine(lineTwo));
     console.log(checkLine(lineThree));
     if (checkHaiku(lineOne, lineTwo, lineThree) === false) {
+      setLineOne('');
+      setLineTwo('');
+      setLineThree('');
       // Form.reset();
       return alert('Haikus must have 5/7/5 syllables!');
     }

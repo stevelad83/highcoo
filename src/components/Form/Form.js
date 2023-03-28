@@ -1,10 +1,10 @@
 import React, { useContext, useState } from 'react';
 import { PoemsContext } from '../../context/PoemsContext.js';
-import { createHaiku } from '../../services/poems.js';
+import { createHaiku, getRandomLine } from '../../services/poems.js';
 import './Form.css';
 
 import { useHistory } from 'react-router-dom';
-import { checkHaiku, checkLine, wordCount } from '../Count/Count.js';
+import { checkHaiku } from '../Count/Count.js';
 
 export default function Form() {
   const history = useHistory();
@@ -21,14 +21,13 @@ export default function Form() {
     const lineOne = e.target[0].value;
     const lineTwo = e.target[1].value;
     const lineThree = e.target[2].value;
-    console.log(checkLine(lineOne));
-    console.log(checkLine(lineTwo));
-    console.log(checkLine(lineThree));
+    // console.log(checkLine(lineOne));
+    // console.log(checkLine(lineTwo));
+    // console.log(checkLine(lineThree));
     if (checkHaiku(lineOne, lineTwo, lineThree) === false) {
       setLineOne('');
       setLineTwo('');
       setLineThree('');
-      // Form.reset();
       return alert('Haikus must have 5/7/5 syllables!');
     }
 
@@ -53,6 +52,7 @@ export default function Form() {
         <input type="text" value={lineThree} onChange={(e) => setLineThree(e.target.value)} />
         <button type="submit">Submit</button>
       </form>
+      <button onClick={getRandomLine}>Randomize</button>
     </div>
   );
 }

@@ -16,6 +16,6 @@ export async function getRandomLine() {
   const random = Math.ceil(Math.random() * count.count);
   console.log('random', random);
   const response = await client.from('poems').select('fiveLine').match({ id: random });
-  console.log('response', response.data[0]);
-  return checkError(response);
+  console.log('response', response.data[0].fiveLine);
+  return checkError(response.data[0].fiveLine);
 }

@@ -1,8 +1,7 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useRef, useState } from 'react';
 import { PoemsContext } from '../../context/PoemsContext.js';
 import { createHaiku, getRandomLine } from '../../services/poems.js';
 import './Form.css';
-
 import { useHistory } from 'react-router-dom';
 import { checkHaiku } from '../Count/Count.js';
 
@@ -13,8 +12,13 @@ export default function Form() {
   const [lineThree, setLineThree] = useState('');
 
   const [haiku, setHaiku] = useState('');
-
   const { setPoems } = useContext(PoemsContext);
+
+  const handleRandomLine = async (e) => {
+    e.preventDefault();
+    const response = await getRandomLine();
+    setLineOne(response[0].fiveLine);
+  };
 
   const handleCreatePoem = async (e) => {
     e.preventDefault();
@@ -53,7 +57,7 @@ export default function Form() {
         <input type="text" value={lineThree} onChange={(e) => setLineThree(e.target.value)} />
         <button type="submit">Submit</button>
       </form>
-      <button onClick={getRandomLine}>Randomize</button>
+      <button onClick={handleRandomLine}>Randomize</button>
     </div>
   );
 }

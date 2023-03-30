@@ -1,6 +1,11 @@
 import React, { useContext, useRef, useState } from 'react';
 import { PoemsContext } from '../../context/PoemsContext.js';
-import { createHaiku, getRandomLine } from '../../services/poems.js';
+import {
+  createHaiku,
+  getRandomLine,
+  getSecondRandomLine,
+  getThirdRandomLine,
+} from '../../services/poems.js';
 import './Form.css';
 import { useHistory } from 'react-router-dom';
 import { checkHaiku } from '../Count/Count.js';
@@ -14,10 +19,21 @@ export default function Form() {
   const [haiku, setHaiku] = useState('');
   const { setPoems } = useContext(PoemsContext);
 
-  const handleRandomLine = async (e) => {
+  const handleRandomLineOne = async (e) => {
     e.preventDefault();
-    const response = await getRandomLine();
+    const response = await getRandomLine('fiveLine');
     setLineOne(response[0].fiveLine);
+  };
+
+  const handleRandomLineTwo = async (e) => {
+    e.preventDefault();
+    const response = await getSecondRandomLine();
+    setLineTwo(response[0].sevenLine);
+  };
+  const handleRandomLineThree = async (e) => {
+    e.preventDefault();
+    const response = await getThirdRandomLine();
+    setLineThree(response[0].finalFive);
   };
 
   const handleCreatePoem = async (e) => {
@@ -57,7 +73,17 @@ export default function Form() {
         <input type="text" value={lineThree} onChange={(e) => setLineThree(e.target.value)} />
         <button type="submit">Submit</button>
       </form>
-      <button onClick={handleRandomLine}>Randomize</button>
+      <div className="random-buttons-div">
+        <button value="fiveLine" onClick={handleRandomLineOne}>
+          Randomize
+        </button>
+        <button value="sevenLine" onClick={handleRandomLineTwo}>
+          Randomize
+        </button>
+        <button value="finalFive" onClick={handleRandomLineThree}>
+          Randomize
+        </button>
+      </div>
     </div>
   );
 }

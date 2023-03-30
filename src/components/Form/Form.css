@@ -5,3 +5,9 @@ form {
 input {
   margin: 5px;
 }
+
+.random-buttons-div {
+  display: flex;
+  justify-content: space-around;
+  padding: 5px;
+}

@@ -11,3 +11,14 @@ input {
   justify-content: space-around;
   padding: 5px;
 }
+
+.create-form {
+  display: flex;
+  justify-content: space-around;
+  padding: 5px;
+}
+
+.create-form,
+input {
+  width: fit-content;
+}

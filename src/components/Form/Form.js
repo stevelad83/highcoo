@@ -44,27 +44,27 @@ export default function Form() {
     // console.log(checkLine(lineOne));
     // console.log(checkLine(lineTwo));
     // console.log(checkLine(lineThree));
-    if (checkHaiku(lineOne, lineTwo, lineThree) === false) {
+    if (checkHaiku(lineOne, lineTwo, lineThree) === false || !lineOne || !lineTwo || !lineThree) {
       setLineOne('');
       setLineTwo('');
       setLineThree('');
       return alert('Haikus must have 5/7/5 syllables!');
-    }
-
-    try {
-      const input = await createHaiku(lineOne, lineTwo, lineThree);
-      setHaiku(input);
-      setPoems((prev) => [...prev, input]);
-      setHaiku('');
-      history.replace('/');
-    } catch (e) {
-      console.error(e.message);
-    }
+      //submit is working with empty inputs or single inputs  and shouldn't be
+    } else
+      try {
+        const input = await createHaiku(lineOne, lineTwo, lineThree);
+        setHaiku(input);
+        setPoems((prev) => [...prev, input]);
+        setHaiku('');
+        history.replace('/');
+      } catch (e) {
+        console.error(e.message);
+      }
   };
 
   return (
     <div>
-      <form onSubmit={handleCreatePoem}>
+      <form className="create-form" onSubmit={handleCreatePoem}>
         <label>Line one</label>
         <input type="text" value={lineOne} onChange={(e) => setLineOne(e.target.value)} />
         <label>Line two</label>

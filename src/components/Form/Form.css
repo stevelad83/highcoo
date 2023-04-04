@@ -1,24 +1,135 @@
-form {
+/* form {
   margin-left: 50px;
 }
 
 input {
   margin: 5px;
-}
+} */
 
-.random-buttons-div {
+/* .random-buttons-div {
   display: flex;
   justify-content: space-around;
   padding: 5px;
+} */
+
+/* .create-form {
+  display: grid;
+  grid-template-columns: 3 1fr;
+} */
+
+form {
+  /* display: grid; */
+  grid-area: 1 / 1 / span 2 / span 3;
+  justify-content: space-between;
 }
 
-.create-form {
-  display: flex;
-  justify-content: space-around;
-  padding: 5px;
-}
-
-.create-form,
 input {
-  width: fit-content;
+  width: 75%;
+  margin: 5px;
 }
+
+label {
+  margin: 5px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+/* 
+.submit-btn {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 4;
+  grid-row-end: 5;
+} */
+
+.smb {
+  grid-column-start: 5;
+  grid-column-end: 6;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+.cell-one {
+  height: 100%;
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  background-color: blueviolet;
+}
+.cell-two {
+  height: 100%;
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-color: dodgerblue;
+}
+.cell-three {
+  height: 100%;
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  background-color: oldlace;
+}
+
+.random-one {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+
+  background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+  box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+  width: 200px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+
+  border-radius: 50px;
+  transition-property: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.random-one:hover {
+  background-position: 100% 0;
+  transition-property: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.random-one:focus {
+  outline: none;
+}
+.random-two {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  border-radius: 20px;
+  background-color: cornflowerblue;
+}
+.random-three {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 5;
+  grid-row-end: 6;
+  background-color: gold;
+}
+
+/* winter colors #6930C3, #5390D9, #48BFE3, #64DFDF, #80FFDB */
+/* spring colors #ADD2C2, #A7D3A6, #CFE795, #F7EF81, #D4C685 */
+/* fall colors #C32F27, #D8572A, #DB7C26, #F7B538, #780116 */
+/* summer colors #FF7B00 #FFA200 #FFB700 #FFD000 #FFEA00 */

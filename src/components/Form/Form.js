@@ -63,27 +63,37 @@ export default function Form() {
   };
 
   return (
-    <div>
-      <form className="create-form" onSubmit={handleCreatePoem}>
-        <label>Line one</label>
-        <input type="text" value={lineOne} onChange={(e) => setLineOne(e.target.value)} />
-        <label>Line two</label>
-        <input type="text" value={lineTwo} onChange={(e) => setLineTwo(e.target.value)} />
-        <label>Line three</label>
-        <input type="text" value={lineThree} onChange={(e) => setLineThree(e.target.value)} />
-        <button type="submit">Submit</button>
+    <div className="container">
+      <form onSubmit={handleCreatePoem}>
+        <div className="cell-one">
+          <label>Line one </label>
+          <input type="text" value={lineOne} onChange={(e) => setLineOne(e.target.value)} />
+        </div>
+        <div className="cell-two">
+          <label>Line two </label>
+          <input type="text" value={lineTwo} onChange={(e) => setLineTwo(e.target.value)} />
+        </div>
+        <div className="cell-three">
+          <label>Line three</label>
+          <input type="text" value={lineThree} onChange={(e) => setLineThree(e.target.value)} />
+        </div>
+        <div className="smb">
+          <button className="submit-btn" type="submit">
+            Submit
+          </button>
+        </div>
       </form>
-      <div className="random-buttons-div">
-        <button value="fiveLine" onClick={handleRandomLineOne}>
-          Randomize
-        </button>
-        <button value="sevenLine" onClick={handleRandomLineTwo}>
-          Randomize
-        </button>
-        <button value="finalFive" onClick={handleRandomLineThree}>
-          Randomize
-        </button>
-      </div>
+      {/* <div className="random-buttons-div"> */}
+      <button className="random-one" value="fiveLine" onClick={handleRandomLineOne}>
+        Randomize
+      </button>
+      <button className="random-two" value="sevenLine" onClick={handleRandomLineTwo}>
+        Randomize
+      </button>
+      <button className="random-three" value="finalFive" onClick={handleRandomLineThree}>
+        Randomize
+      </button>
     </div>
+    // </div>
   );
 }

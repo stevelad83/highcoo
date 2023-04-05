@@ -43,3 +43,5 @@ export async function getThirdRandomLine() {
   console.log('secondResponse', response.data[0].finalFive);
   return checkError(response);
 }
+
+//why is random line sometimes breaking?

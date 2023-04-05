@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { PoemsContext } from '../../context/PoemsContext.js';
 import {
   createHaiku,

@@ -17,6 +17,9 @@ input {
   grid-template-columns: 3 1fr;
 } */
 
+.container {
+  margin: 5px;
+}
 form {
   /* display: grid; */
   grid-area: 1 / 1 / span 2 / span 3;
@@ -24,7 +27,8 @@ form {
 }
 
 input {
-  width: 75%;
+  height: 12%;
+  width: 85%;
   margin: 5px;
 }
 
@@ -37,25 +41,19 @@ label {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
 }
-/* 
-.submit-btn {
-  grid-column-start: 4;
-  grid-column-end: 5;
-  grid-row-start: 4;
-  grid-row-end: 5;
-} */
 
 .smb {
   display: flex;
   justify-content: flex-end;
-
   grid-column-start: 5;
   grid-column-end: 6;
   grid-row-start: 5;
   grid-row-end: 6;
   background-color: red;
+  min-width: 200px;
 }
 .cell-one {
+  min-width: 200px;
   height: 100%;
   grid-column-start: 1;
   grid-column-end: 6;
@@ -64,6 +62,7 @@ label {
   background-color: #5390d9;
 }
 .cell-two {
+  min-width: 200px;
   height: 100%;
   grid-column-start: 1;
   grid-column-end: 6;
@@ -72,6 +71,7 @@ label {
   background-color: #48bfe3;
 }
 .cell-three {
+  min-width: 200px;
   height: 100%;
   grid-column-start: 1;
   grid-column-end: 6;
@@ -92,7 +92,7 @@ label {
 .random-three {
   background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
   box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
-  width: 200px;
+  width: 80%;
   font-size: 16px;
   font-weight: 600;
   color: #fff;
@@ -165,6 +165,9 @@ label {
   grid-row-end: 6;
 }
 
+.submit-btn {
+  width: 100%;
+}
 /* winter colors #6930C3, #5390D9, #48BFE3, #64DFDF, #80FFDB */
 /* spring colors #ADD2C2, #A7D3A6, #CFE795, #F7EF81, #D4C685 */
 /* fall colors #C32F27, #D8572A, #DB7C26, #F7B538, #780116 */

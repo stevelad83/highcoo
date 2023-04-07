@@ -95,6 +95,17 @@ export default function Form() {
       <button className="random-three" value="finalFive" onClick={handleRandomLineThree}>
         Randomize
       </button>
+      <div className="season-selector">
+        <label>
+          Pick a season:
+          <select>
+            <option value="spring">Spring</option>
+            <option value="spring">Summer</option>
+            <option value="spring">Autumn</option>
+            <option value="spring">Winter</option>
+          </select>
+        </label>
+      </div>
     </div>
     // </div>
   );

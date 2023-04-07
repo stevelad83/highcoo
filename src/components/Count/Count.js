@@ -1,6 +1,7 @@
 import { syllable } from 'syllable';
 
 export function wordCount(word) {
+  if (word === 'poem') return 2;
   if (word === 'busier') return 3;
   if (word === 'permeates') return 3;
   if (word === 'miscellaneous') return 5;

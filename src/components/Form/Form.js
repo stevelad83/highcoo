@@ -84,9 +84,11 @@ export default function Form() {
         </div>
       </form>
       {/* <div className="random-buttons-div"> */}
-      <button className="random-one" value="fiveLine" onClick={handleRandomLineOne}>
-        Randomize
-      </button>
+      <div className="yo">
+        <button className="random-one" value="fiveLine" onClick={handleRandomLineOne}>
+          Randomize
+        </button>
+      </div>
       <button className="random-two" value="sevenLine" onClick={handleRandomLineTwo}>
         Randomize
       </button>

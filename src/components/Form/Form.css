@@ -46,6 +46,9 @@ label {
 } */
 
 .smb {
+  display: flex;
+  justify-content: flex-end;
+
   grid-column-start: 5;
   grid-column-end: 6;
   grid-row-start: 5;
@@ -58,7 +61,7 @@ label {
   grid-column-end: 6;
   grid-row-start: 1;
   grid-row-end: 2;
-  background-color: blueviolet;
+  background-color: #5390d9;
 }
 .cell-two {
   height: 100%;
@@ -66,7 +69,7 @@ label {
   grid-column-end: 6;
   grid-row-start: 2;
   grid-row-end: 3;
-  background-color: dodgerblue;
+  background-color: #48bfe3;
 }
 .cell-three {
   height: 100%;
@@ -74,7 +77,7 @@ label {
   grid-column-end: 6;
   grid-row-start: 3;
   grid-row-end: 4;
-  background-color: oldlace;
+  background-color: #64dfdf;
 }
 
 .random-one {
@@ -84,7 +87,9 @@ label {
   grid-row-end: 2;
 }
 
-button {
+.random-one,
+.random-two,
+.random-three {
   background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
   box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
   width: 200px;
@@ -104,10 +109,14 @@ button {
   transition: all 0.4s ease-in-out;
 }
 
-button:active {
+.random-one:active,
+.random-two:active,
+.random-three:active {
   animation: shake 0.4s ease-out;
 }
-button:hover {
+.random-one:hover,
+.random-two:hover,
+.random-three:hover {
   background-position: 100% 0;
   transition-property: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
@@ -138,7 +147,9 @@ button:hover {
   }
 }
 
-button:focus {
+.random-one:focus,
+.random-two:focus,
+.random-three:focus {
   outline: none;
 }
 .random-two {
@@ -152,7 +163,6 @@ button:focus {
   grid-column-end: 5;
   grid-row-start: 5;
   grid-row-end: 6;
-  background-color: gold;
 }
 
 /* winter colors #6930C3, #5390D9, #48BFE3, #64DFDF, #80FFDB */

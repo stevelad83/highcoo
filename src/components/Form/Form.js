@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { PoemsContext } from '../../context/PoemsContext.js';
 import {
   createHaiku,
@@ -15,9 +15,18 @@ export default function Form() {
   const [lineOne, setLineOne] = useState('');
   const [lineTwo, setLineTwo] = useState('');
   const [lineThree, setLineThree] = useState('');
-
+  const [theme, setTheme] = useState('');
   const [haiku, setHaiku] = useState('');
   const { setPoems } = useContext(PoemsContext);
+
+  // useEffect(() => {
+  //   const currentThemeColor = localStorage.getItem('theme');
+  //   if (currentThemeColor) {
+  //     setColorTheme(currentThemeColor);
+  //     console.log('currentThemeColor', currentThemeColor);
+  //     document.body.style.backgroundColor = colorTheme;
+  //   }
+  // }, [colorTheme]);
 
   const handleRandomLineOne = async (e) => {
     e.preventDefault();
@@ -62,6 +71,12 @@ export default function Form() {
       }
   };
 
+  const handleSelect = (theme) => {
+    setTheme(theme);
+    console.log('theme', theme);
+    localStorage.setItem('theme', theme);
+  };
+
   return (
     <div className="container">
       <form onSubmit={handleCreatePoem}>
@@ -98,11 +113,19 @@ export default function Form() {
       <div className="season-selector">
         <label>
           Pick a season:
-          <select>
-            <option value="spring">Spring</option>
-            <option value="spring">Summer</option>
-            <option value="spring">Autumn</option>
-            <option value="spring">Winter</option>
+          <select onChange={(e) => handleSelect(e.target.value)}>
+            <option value="spring" className="spring">
+              Spring
+            </option>
+            <option value="summer" className="summer">
+              Summer
+            </option>
+            <option value="autumn" className="autumn">
+              Autumn
+            </option>
+            <option value="winter" className="winter">
+              Winter
+            </option>
           </select>
         </label>
       </div>

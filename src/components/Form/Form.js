@@ -18,13 +18,15 @@ export default function Form() {
   const [theme, setTheme] = useState('');
   const [haiku, setHaiku] = useState('');
   const { setPoems } = useContext(PoemsContext);
+  const container = document.querySelector('.container');
+  const [isActive, setIsActive] = useState(false);
 
   // useEffect(() => {
   //   const currentThemeColor = localStorage.getItem('theme');
   //   if (currentThemeColor) {
   //     setColorTheme(currentThemeColor);
   //     console.log('currentThemeColor', currentThemeColor);
-  //     document.body.style.backgroundColor = colorTheme;
+  //
   //   }
   // }, [colorTheme]);
 
@@ -72,9 +74,14 @@ export default function Form() {
   };
 
   const handleSelect = (theme) => {
-    setTheme(theme);
-    console.log('theme', theme);
-    localStorage.setItem('theme', theme);
+    // setIsActive((current) => !current);
+    // setTheme(theme);
+    // console.log('theme', theme);
+    // localStorage.setItem('theme', theme);
+    //remove current theme
+    container.classList.add(`${theme}`);
+
+    console.log('container', container);
   };
 
   return (
@@ -114,6 +121,9 @@ export default function Form() {
         <label>
           Pick a season:
           <select onChange={(e) => handleSelect(e.target.value)}>
+            <option value="winter" className="winter">
+              Winter
+            </option>
             <option value="spring" className="spring">
               Spring
             </option>
@@ -122,9 +132,6 @@ export default function Form() {
             </option>
             <option value="autumn" className="autumn">
               Autumn
-            </option>
-            <option value="winter" className="winter">
-              Winter
             </option>
           </select>
         </label>

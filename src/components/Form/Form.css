@@ -156,6 +156,40 @@ label {
 .submit-btn {
   width: 100%;
 }
+
+.autumn {
+  .cell-one {
+    background-color: #c32f27;
+  }
+  .cell-two {
+    background-color: #db7c26;
+  }
+  .cell-three {
+    background-color: #780116;
+  }
+}
+.spring {
+  .cell-one {
+    background-color: #add2c2;
+  }
+  .cell-two {
+    background-color: #cfe795;
+  }
+  .cell-three {
+    background-color: #d4c685;
+  }
+}
+.summer {
+  .cell-one {
+    background-color: #ff7b00;
+  }
+  .cell-two {
+    background-color: #ffb700;
+  }
+  .cell-three {
+    background-color: #ffea00;
+  }
+}
 /* winter colors #6930C3, #5390D9, #48BFE3, #64DFDF, #80FFDB */
 /* spring colors #ADD2C2, #A7D3A6, #CFE795, #F7EF81, #D4C685 */
 /* fall colors #C32F27, #D8572A, #DB7C26, #F7B538, #780116 */

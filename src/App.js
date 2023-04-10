@@ -9,17 +9,17 @@ import useLocalStorage from 'use-local-storage';
 
 function App() {
   const { user } = useUser();
-  const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
+  // const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  // const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
 
-  const switchTheme = () => {
-    const newTheme = theme === 'light' ? 'Dark' : 'light';
-    setTheme(newTheme);
-  };
+  // const switchTheme = () => {
+  //   const newTheme = theme === 'light' ? 'Dark' : 'light';
+  //   setTheme(newTheme);
+  // };
   return (
-    <div className="App" data-theme={theme}>
+    <div className="App">
       <Header />
-      <button onClick={switchTheme}>Switch to {theme === 'light' ? 'Dark' : 'light'} Theme </button>
+      {/* <button onClick={switchTheme}>Switch to {theme === 'light' ? 'Dark' : 'light'} Theme </button> */}
       <Switch>
         <Route exact path="/auth/:type" component={Auth} />
         <Route exact path="/home" component={Home} />

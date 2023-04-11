@@ -159,36 +159,36 @@ label {
 
 .winter {
   .cell-one {
-    background-color: #6930c3;
+    background: linear-gradient(#e3f2fd, 80%, #bbdefb);
   }
   .cell-two {
-    background-color: #48bfe3;
+    background: linear-gradient(#90caf9, 80%, #64b5f6);
   }
   .cell-three {
-    background-color: #80ffdb;
+    background: linear-gradient(#42a5f5, 80%, #2196f3);
   }
 }
 
 .spring {
   .cell-one {
-    background-color: #add2c2;
+    background: linear-gradient(#eaedc9, 20%, #edeec9);
   }
   .cell-two {
-    background-color: #cfe795;
+    background: linear-gradient(#dde7c7, 20%, #bfd8bd);
   }
   .cell-three {
-    background-color: #d4c685;
+    background: linear-gradient(#98c9a3, 20%, #77bfa3);
   }
 }
 .summer {
   .cell-one {
-    background: #ff7b00;
+    background: linear-gradient(#ffea00, 80%, #ffee33);
   }
   .cell-two {
-    background-color: #ffb700;
+    background: linear-gradient(#ffd000, 80%, #ffb700);
   }
   .cell-three {
-    background-color: #ffea00;
+    background: linear-gradient(#ffa200, 80%, #ff7b00);
   }
 }
 

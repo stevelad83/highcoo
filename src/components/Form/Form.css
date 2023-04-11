@@ -157,17 +157,18 @@ label {
   width: 100%;
 }
 
-.autumn {
+.winter {
   .cell-one {
-    background-color: #c32f27;
+    background-color: #6930c3;
   }
   .cell-two {
-    background-color: #db7c26;
+    background-color: #48bfe3;
   }
   .cell-three {
-    background-color: #780116;
+    background-color: #80ffdb;
   }
 }
+
 .spring {
   .cell-one {
     background-color: #add2c2;
@@ -181,7 +182,7 @@ label {
 }
 .summer {
   .cell-one {
-    background-color: #ff7b00;
+    background: #ff7b00;
   }
   .cell-two {
     background-color: #ffb700;
@@ -190,7 +191,19 @@ label {
     background-color: #ffea00;
   }
 }
+
+.autumn {
+  .cell-one {
+    background: linear-gradient(#f7b538, 80%, #db7c26);
+  }
+  .cell-two {
+    background: linear-gradient(#da7527, 80%, #d8572a);
+  }
+  .cell-three {
+    background: linear-gradient(#c32f27, 80%, #780116);
+  }
+}
 /* winter colors #6930C3, #5390D9, #48BFE3, #64DFDF, #80FFDB */
 /* spring colors #ADD2C2, #A7D3A6, #CFE795, #F7EF81, #D4C685 */
-/* fall colors #C32F27, #D8572A, #DB7C26, #F7B538, #780116 */
+/* fall colors #C32F27, #D8572A, #DA7527,#DB7C26, #F7B538, #780116 */
 /* summer colors #FF7B00 #FFA200 #FFB700 #FFD000 #FFEA00 */

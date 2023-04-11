@@ -1,7 +1,6 @@
 import { useUser } from '../../context/UserContext';
 import { signOut } from '../../services/auth';
 import './Header.css';
-import { useNavigate } from 'react-router-dom';
 
 export default function Header() {
   const { user, setUser } = useUser();
@@ -10,11 +9,7 @@ export default function Header() {
     try {
       await signOut();
       setUser(null);
-
-      location.assign('/auth');
-      // setUser(null);
-      // history.pushState('/auth/sign-in', '');
-      //why does redirect on sign out not work from form component?
+      location.replace('/auth');
     } catch (error) {
       console.error(error.message);
     }

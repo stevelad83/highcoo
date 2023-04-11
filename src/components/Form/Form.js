@@ -15,20 +15,9 @@ export default function Form() {
   const [lineOne, setLineOne] = useState('');
   const [lineTwo, setLineTwo] = useState('');
   const [lineThree, setLineThree] = useState('');
-  const [theme, setTheme] = useState('');
+  const [theme, setTheme] = useState('winter');
   const [haiku, setHaiku] = useState('');
   const { setPoems } = useContext(PoemsContext);
-  const container = document.querySelector('.container');
-  const [isActive, setIsActive] = useState(false);
-
-  // useEffect(() => {
-  //   const currentThemeColor = localStorage.getItem('theme');
-  //   if (currentThemeColor) {
-  //     setColorTheme(currentThemeColor);
-  //     console.log('currentThemeColor', currentThemeColor);
-  //
-  //   }
-  // }, [colorTheme]);
 
   const handleRandomLineOne = async (e) => {
     e.preventDefault();
@@ -52,9 +41,7 @@ export default function Form() {
     const lineOne = e.target[0].value;
     const lineTwo = e.target[1].value;
     const lineThree = e.target[2].value;
-    // console.log(checkLine(lineOne));
-    // console.log(checkLine(lineTwo));
-    // console.log(checkLine(lineThree));
+
     if (checkHaiku(lineOne, lineTwo, lineThree) === false || !lineOne || !lineTwo || !lineThree) {
       setLineOne('');
       setLineTwo('');
@@ -74,18 +61,11 @@ export default function Form() {
   };
 
   const handleSelect = (theme) => {
-    // setIsActive((current) => !current);
-    // setTheme(theme);
-    // console.log('theme', theme);
-    // localStorage.setItem('theme', theme);
-    //remove current theme
-    container.classList.add(`${theme}`);
-
-    console.log('container', container);
+    setTheme(theme);
   };
 
   return (
-    <div className="container">
+    <div className={`container ${theme}`}>
       <form onSubmit={handleCreatePoem}>
         <div className="cell-one">
           <label>Line one </label>

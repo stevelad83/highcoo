@@ -159,13 +159,13 @@ label {
 
 .winter {
   .cell-one {
-    background: linear-gradient(#e3f2fd, 80%, #bbdefb);
+    background: linear-gradient(#e3f2fd, 20%, #bbdefb);
   }
   .cell-two {
-    background: linear-gradient(#90caf9, 80%, #64b5f6);
+    background: linear-gradient(#90caf9, 20%, #64b5f6);
   }
   .cell-three {
-    background: linear-gradient(#42a5f5, 80%, #2196f3);
+    background: linear-gradient(#2196f3, 20%, #6930c3);
   }
 }
 

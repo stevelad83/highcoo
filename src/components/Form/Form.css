@@ -100,7 +100,7 @@ label {
 .random-one:active,
 .random-two:active,
 .random-three:active {
-  animation: shake 0.4s ease-out;
+  animation: shake 0.4s linear infinite;
 }
 .random-one:hover,
 .random-two:hover,
@@ -110,28 +110,29 @@ label {
   -o-transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
-  /* animation: shake 0.4s ease-out; */
+  transform: translate(10px);
+  /* animation: shake 0.4s linear infinite; */
 }
 
 @keyframes shake {
   0% {
-    transform: skewX(-30deg);
+    transform: rotate(0deg);
   }
 
   25% {
-    transform: skewX(30deg);
+    transform: rotate(5deg);
   }
 
   50% {
-    transform: skewX(-30deg);
+    transform: rotate(0deg);
   }
 
   75% {
-    transform: skewX(30deg);
+    transform: rotate(-5deg);
   }
 
   100% {
-    transform: skewX(-10deg);
+    transform: rotate(0deg);
   }
 }
 

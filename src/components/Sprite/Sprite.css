@@ -1,0 +1,28 @@
+.sprite-parent {
+  display: flex;
+  justify-content: center;
+  width: 1400px;
+}
+
+.sprite {
+  margin: 50px;
+  height: 167px;
+  width: 122px;
+  border: solid gainsboro 2px;
+  border-radius: 100%;
+  background: url(../../../public/spritesheettwo.png);
+  /* need to remove background noise from images */
+  animation: sprite 12s steps(7) infinite;
+}
+
+@keyframes sprite {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -851px;
+  }
+  /* 100% {
+    background-position: -1800px;
+  } */
+}

@@ -9,6 +9,7 @@ import {
 import './Form.css';
 import { useHistory } from 'react-router-dom';
 import { checkHaiku } from '../Count/Count.js';
+import Sprite from '../Sprite/Sprite.js';
 
 export default function Form() {
   const history = useHistory();
@@ -65,57 +66,58 @@ export default function Form() {
   };
 
   return (
-    <div className={`container ${theme}`}>
-      <form onSubmit={handleCreatePoem}>
-        <div className="cell-one">
-          <label>Line one </label>
-          <input type="text" value={lineOne} onChange={(e) => setLineOne(e.target.value)} />
-        </div>
-        <div className="cell-two">
-          <label>Line two </label>
-          <input type="text" value={lineTwo} onChange={(e) => setLineTwo(e.target.value)} />
-        </div>
-        <div className="cell-three">
-          <label>Line three</label>
-          <input type="text" value={lineThree} onChange={(e) => setLineThree(e.target.value)} />
-        </div>
-        <div className="smb">
-          <button className="submit-btn" type="submit">
-            Submit
-          </button>
-        </div>
-      </form>
-      {/* <div className="random-buttons-div"> */}
-      <div className="yo">
+    <div className="main-container">
+      <div className={`container ${theme}`}>
+        <form onSubmit={handleCreatePoem}>
+          <div className="cell-one">
+            <label>Line one </label>
+            <input type="text" value={lineOne} onChange={(e) => setLineOne(e.target.value)} />
+          </div>
+          <div className="cell-two">
+            <label>Line two </label>
+            <input type="text" value={lineTwo} onChange={(e) => setLineTwo(e.target.value)} />
+          </div>
+          <div className="cell-three">
+            <label>Line three</label>
+            <input type="text" value={lineThree} onChange={(e) => setLineThree(e.target.value)} />
+          </div>
+          <div className="smb">
+            <button className="submit-btn" type="submit">
+              Submit
+            </button>
+          </div>
+        </form>
+        {/* <div className="random-buttons-div"> */}
         <button className="random-one" value="fiveLine" onClick={handleRandomLineOne}>
           Randomize
         </button>
+        <button className="random-two" value="sevenLine" onClick={handleRandomLineTwo}>
+          Randomize
+        </button>
+        <button className="random-three" value="finalFive" onClick={handleRandomLineThree}>
+          Randomize
+        </button>
+        <div className="season-selector">
+          <label>
+            Pick a season:
+            <select onChange={(e) => handleSelect(e.target.value)}>
+              <option value="winter" className="winter">
+                Winter
+              </option>
+              <option value="spring" className="spring">
+                Spring
+              </option>
+              <option value="summer" className="summer">
+                Summer
+              </option>
+              <option value="autumn" className="autumn">
+                Autumn
+              </option>
+            </select>
+          </label>
+        </div>
       </div>
-      <button className="random-two" value="sevenLine" onClick={handleRandomLineTwo}>
-        Randomize
-      </button>
-      <button className="random-three" value="finalFive" onClick={handleRandomLineThree}>
-        Randomize
-      </button>
-      <div className="season-selector">
-        <label>
-          Pick a season:
-          <select onChange={(e) => handleSelect(e.target.value)}>
-            <option value="winter" className="winter">
-              Winter
-            </option>
-            <option value="spring" className="spring">
-              Spring
-            </option>
-            <option value="summer" className="summer">
-              Summer
-            </option>
-            <option value="autumn" className="autumn">
-              Autumn
-            </option>
-          </select>
-        </label>
-      </div>
+      <Sprite />
     </div>
     // </div>
   );

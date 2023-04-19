@@ -2,6 +2,7 @@ import React from 'react';
 import { Redirect } from 'react-router-dom';
 import { useUser } from '../../context/UserContext.js';
 import PoemsList from '../List/PoemsList.js';
+import Wave from '../Wave/Wave.js';
 
 export default function Home() {
   const { user } = useUser();

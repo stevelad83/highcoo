@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@500&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -14,7 +16,7 @@ body {
   color: var();
   cursor: default;
   display: flex;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'El Messiri', sans-serif;
   height: 100vh;
   justify-content: center;
   width: 100%;

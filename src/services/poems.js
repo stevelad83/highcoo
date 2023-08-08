@@ -10,6 +10,12 @@ export async function createHaiku(fiveLine, sevenLine, finalFive) {
   return checkError(response);
 }
 
+export async function deletePoem(id) {
+  const response = await client.from('poems').delete().match({ id }).single();
+  console.log('response', response);
+  return response;
+}
+
 export async function getRandomLine() {
   const count = await client.from('poems').select('*', { count: 'exact' });
   // console.log('row count', count.count);

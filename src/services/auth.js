@@ -1,6 +1,7 @@
 import { client } from './client';
 
 export function getUser() {
+  console.log('client.auth.currentUser', client.auth.currentUser);
   return client.auth.currentUser;
 }
 

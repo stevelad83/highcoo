@@ -6,7 +6,7 @@ import Wave from '../Wave/Wave.js';
 import PoemCard from './PoemCard.js';
 
 export default function PoemsList() {
-  const { poems, setPoems, deletePoem } = useContext(PoemsContext);
+  const { poems, setPoems } = useContext(PoemsContext);
 
   const handlePoemDelete = (deletePoemId) => {
     setPoems((prevPoems) => prevPoems.filter((poem) => poem.id !== deletePoemId));
@@ -19,9 +19,11 @@ export default function PoemsList() {
           return <PoemCard key={poem.id} poem={poem} onDelete={handlePoemDelete} />;
         })}
       </div>
-      <Link to="/form" className="write-haiku">
-        Write a haiku
-      </Link>
+      <div className="link-div">
+        <Link to="/form" className="write-haiku">
+          Write a haiku
+        </Link>
+      </div>
       <Wave />
     </>
   );

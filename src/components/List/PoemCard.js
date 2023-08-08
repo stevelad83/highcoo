@@ -4,9 +4,10 @@ import { deletePoem } from '../../services/poems.js';
 
 export default function PoemCard({ poem, onDelete }) {
   const user = useUser();
-  console.log('poem', poem);
-  console.log('user.id', user.id);
-  const owner = poem.user_id;
+  console.log('user', user);
+  // console.log('poem', poem);
+  // console.log('user.id', user.id);
+  const owner = user.user.id === poem.user_id;
 
   const handleDelete = async () => {
     await deletePoem(poem.id);
@@ -14,7 +15,7 @@ export default function PoemCard({ poem, onDelete }) {
   };
 
   return (
-    <div className="poem-card" key={poem.id}>
+    <div key={poem.id}>
       <ul className="list">
         <li>{poem.fiveLine}</li>
         <li>{poem.sevenLine}</li>

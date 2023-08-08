@@ -2,7 +2,7 @@ import React from 'react';
 import { useUser } from '../../context/UserContext.js';
 import { deletePoem } from '../../services/poems.js';
 
-export default function PoemCard({ poem }) {
+export default function PoemCard({ poem, onDelete }) {
   const user = useUser();
   console.log('poem', poem);
   console.log('user.id', user.id);
@@ -10,6 +10,7 @@ export default function PoemCard({ poem }) {
 
   const handleDelete = async () => {
     await deletePoem(poem.id);
+    onDelete(poem.id);
   };
 
   return (

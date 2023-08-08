@@ -59,7 +59,11 @@ const PoemsProvider = ({ children }) => {
     try {
       await deletePoem({ poemId });
       console.log('Poem deleted successfully!');
-      setPoems((prevPoems) => prevPoems.filter((poem) => poem.id !== poemId));
+      // After successful deletion, update the poems list in the context
+      setPoems((prevPoems) => {
+        console.log('Prev poems:', prevPoems);
+        return prevPoems.filter((poem) => poem.id !== poemId);
+      });
     } catch (error) {
       console.error('Error deleting poem:', error.message);
     }

@@ -10,6 +10,7 @@ import './Form.css';
 import { useHistory } from 'react-router-dom';
 import { checkHaiku } from '../Count/Count.js';
 import Sprite from '../Sprite/Sprite.js';
+import { useUser } from '../../context/UserContext.js';
 
 export default function Form() {
   const history = useHistory();
@@ -19,6 +20,7 @@ export default function Form() {
   const [theme, setTheme] = useState('winter');
   const [haiku, setHaiku] = useState('');
   const { setPoems } = useContext(PoemsContext);
+  const { user } = useUser();
 
   const handleRandomLineOne = async (e) => {
     e.preventDefault();
@@ -39,6 +41,9 @@ export default function Form() {
 
   const handleCreatePoem = async (e) => {
     e.preventDefault();
+
+    const userId = user ? user.id : null;
+
     const lineOne = e.target[0].value;
     const lineTwo = e.target[1].value;
     const lineThree = e.target[2].value;
@@ -51,7 +56,7 @@ export default function Form() {
       //submit is working with empty inputs or single inputs  and shouldn't be
     } else
       try {
-        const input = await createHaiku(lineOne, lineTwo, lineThree);
+        const input = await createHaiku(userId, lineOne, lineTwo, lineThree);
         setHaiku(input);
         setPoems((prev) => [...prev, input]);
         setHaiku('');

@@ -23,6 +23,7 @@ export default function PoemsList() {
         <Link to="/form" className="write-haiku">
           Write a haiku
         </Link>
+        <img src="/images/quill.png" alt="quill"></img>
       </div>
       <Wave />
     </>

@@ -1,10 +1,11 @@
 import React from 'react';
 import { useUser } from '../../context/UserContext.js';
 import { deletePoem } from '../../services/poems.js';
+import './PoemCard.css';
 
 export default function PoemCard({ poem, onDelete }) {
   const user = useUser();
-  console.log('user', user);
+  // console.log('user', user);
   // console.log('poem', poem);
   // console.log('user.id', user.id);
   const owner = user.user.id === poem.user_id;
@@ -15,7 +16,7 @@ export default function PoemCard({ poem, onDelete }) {
   };
 
   return (
-    <div key={poem.id}>
+    <div className="poem-card" key={poem.id}>
       <ul className="list">
         <li>{poem.fiveLine}</li>
         <li>{poem.sevenLine}</li>

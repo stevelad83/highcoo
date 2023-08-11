@@ -9,6 +9,12 @@ input {
   margin: 5px;
 }
 
+input:focus {
+  border-color: #5390d9; /* Change to your desired focused color */
+  background-color: #f0f0f0; /* Change to your desired background color */
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
 label {
   margin: 5px;
 }
@@ -61,7 +67,7 @@ label {
   grid-column: 4 /5;
   grid-row: 6;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 .season-selector > label {
@@ -69,6 +75,7 @@ label {
 }
 
 .random-one {
+  justify-self: center;
   align-self: self-start;
   grid-column-start: 4;
   grid-column-end: 5;
@@ -97,11 +104,14 @@ label {
   transition: all 0.4s ease-in-out;
 }
 
-.random-one:active,
+.random-one.random-one:active,
 .random-two:active,
 .random-three:active {
   animation: shake 0.4s linear infinite;
 }
+
+/*Make animation run on click instead of on active?*/
+
 .random-one:hover,
 .random-two:hover,
 .random-three:hover {
@@ -142,12 +152,16 @@ label {
   outline: none;
 }
 .random-two {
+  justify-self: center;
+  align-self: self-start;
   grid-column-start: 4;
   grid-column-end: 5;
   grid-row-start: 3;
   grid-row-end: 4;
 }
 .random-three {
+  justify-self: center;
+  align-self: self-start;
   grid-column-start: 4;
   grid-column-end: 5;
   grid-row-start: 5;

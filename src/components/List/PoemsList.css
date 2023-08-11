@@ -3,31 +3,34 @@ li {
 }
 
 .poems-list {
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: center; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0;
+  padding: 0;
 }
 
-.poem-card {
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 .write-haiku {
   color: mediumslateblue;
   text-decoration: underline;
   font-weight: 200;
 }
 ul {
-  background-color: whitesmoke;
+  background-color: white;
   border: 1px solid black;
   border-radius: 5px;
   padding: 15px;
-  box-shadow: 5px 10px 18px #888888;
+  box-shadow: 12px 10px 18px black;
 }
 
 .link-div {
   display: flex;
   justify-content: center;
+  font-size: x-large;
+}
+
+.link-div img {
+  height: 32px;
 }

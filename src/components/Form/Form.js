@@ -53,7 +53,6 @@ export default function Form() {
       setLineTwo('');
       setLineThree('');
       return alert('Haikus must have 5/7/5 syllables!');
-      //submit is working with empty inputs or single inputs  and shouldn't be
     } else
       try {
         const input = await createHaiku(userId, lineOne, lineTwo, lineThree);
@@ -123,7 +122,7 @@ export default function Form() {
         </div>
       </div>
       {/* <WondersButton /> */}
-      <Sprite />
+      {/* <Sprite /> */}
     </div>
     // </div>
   );

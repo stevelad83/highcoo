@@ -1,4 +1,4 @@
-header {
+/* header {
   align-items: center;
   background-color: var(--color4);
   border-bottom: 3px solid var(--color1);
@@ -24,4 +24,46 @@ h2 {
   font-size: large;
   font-weight: 700;
   text-transform: uppercase;
+} */
+
+header {
+  align-items: center;
+  background-color: var(--color4);
+  border-bottom: 2px solid var(--color2);
+  color: var(--color2);
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  padding: 25px;
+  width: 100vw;
+}
+
+/* Keep the font size for larger screens */
+.welcome,
+h2 {
+  font-size: 2em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.header > button {
+  background-color: var(--color4);
+  border: none;
+  color: var(--color2);
+  cursor: pointer;
+  font-size: large;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Adjust font sizes for smaller screens */
+@media (max-width: 768px) {
+  .welcome,
+  h2 {
+    font-size: 1.5em; /* You can adjust this value based on your design */
+  }
+
+  .header > button {
+    font-size: medium; /* You can adjust this value based on your design */
+  }
 }

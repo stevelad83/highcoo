@@ -30,7 +30,7 @@ input:focus {
 .input-form {
   display: grid;
   justify-items: end;
-  margin-right: 50px;
+  margin-right: 20px;
   padding: 10px 0px 10px 0px;
 }
 

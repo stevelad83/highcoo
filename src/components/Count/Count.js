@@ -6,6 +6,7 @@ export function wordCount(word) {
   if (word === 'permeates') return 3;
   if (word === 'miscellaneous') return 5;
   if (word === 'frequently') return 3;
+  if (word === 'everything') return 3;
   return syllable(word);
 }
 

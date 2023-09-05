@@ -102,26 +102,24 @@ export default function Form() {
           Randomize
         </button>
         <div className="season-selector">
-          <label>
-            Pick a season:
-            <select onChange={(e) => handleSelect(e.target.value)}>
-              <option value="winter" className="winter">
-                Winter
-              </option>
-              <option value="spring" className="spring">
-                Spring
-              </option>
-              <option value="summer" className="summer">
-                Summer
-              </option>
-              <option value="autumn" className="autumn">
-                Autumn
-              </option>
-            </select>
-          </label>
+          <label>Pick a season:</label>
+          <select onChange={(e) => handleSelect(e.target.value)}>
+            <option value="winter" className="winter">
+              Winter
+            </option>
+            <option value="spring" className="spring">
+              Spring
+            </option>
+            <option value="summer" className="summer">
+              Summer
+            </option>
+            <option value="autumn" className="autumn">
+              Autumn
+            </option>
+          </select>
         </div>
       </div>
-      {/* <WondersButton /> */}
+
       {/* <Sprite /> */}
     </div>
     // </div>

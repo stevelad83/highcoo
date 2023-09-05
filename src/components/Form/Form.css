@@ -15,10 +15,6 @@ input:focus {
   transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
-label {
-  margin: 5px;
-}
-
 .container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -67,14 +63,24 @@ label {
   grid-column: 4 /5;
   grid-row: 6;
   display: flex;
-  /* justify-content: center; */
+  justify-content: center;
+  align-items: center;
 }
 
+.season-selector > div {
+  margin-right: 10px;
+}
 .season-selector > label {
-  margin: 20px;
+  justify-content: space-around;
+  margin: 5px;
 }
 
-.random-one {
+.season-selector label,
+.season-selector select {
+  vertical-align: middle;
+}
+
+.season-selector .random-one {
   justify-self: center;
   align-self: self-start;
   grid-column-start: 4;

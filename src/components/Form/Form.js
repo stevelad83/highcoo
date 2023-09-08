@@ -17,7 +17,7 @@ export default function Form() {
   const [lineTwo, setLineTwo] = useState('');
   const [lineThree, setLineThree] = useState('');
   const [theme, setTheme] = useState('winter');
-  const [haiku, setHaiku] = useState('');
+  const [, setHaiku] = useState('');
   const { setPoems } = useContext(PoemsContext);
   const { user } = useUser();
 

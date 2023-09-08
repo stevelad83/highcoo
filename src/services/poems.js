@@ -17,7 +17,6 @@ export async function createHaiku(userId, fiveLine, sevenLine, finalFive) {
 
 export async function deletePoem(id) {
   const response = await client.from('poems').delete().match({ id }).single();
-  console.log('response', response);
   return response;
 }
 

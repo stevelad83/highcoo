@@ -5,9 +5,6 @@ import './PoemCard.css';
 
 export default function PoemCard({ poem, onDelete }) {
   const user = useUser();
-  // console.log('user', user);
-  // console.log('poem', poem);
-  // console.log('user.id', user.id);
   const owner = user.user.id === poem.user_id;
 
   const handleDelete = async () => {

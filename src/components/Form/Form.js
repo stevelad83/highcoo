@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { PoemsContext } from '../../context/PoemsContext.js';
 import {
   createHaiku,
@@ -9,7 +9,6 @@ import {
 import './Form.css';
 import { useHistory } from 'react-router-dom';
 import { checkHaiku } from '../Count/Count.js';
-import Sprite from '../Sprite/Sprite.js';
 import { useUser } from '../../context/UserContext.js';
 
 export default function Form() {
@@ -96,7 +95,6 @@ export default function Form() {
             </button>
           </div>
         </form>
-        {/* <div className="random-buttons-div"> */}
         <button className="random-one" value="fiveLine" onClick={handleRandomLineOne}>
           Randomize
         </button>
@@ -124,9 +122,6 @@ export default function Form() {
           </select>
         </div>
       </div>
-
-      {/* <Sprite /> */}
     </div>
-    // </div>
   );
 }

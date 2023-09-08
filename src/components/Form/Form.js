@@ -67,6 +67,11 @@ export default function Form() {
 
   const handleSelect = (theme) => {
     setTheme(theme);
+    const buttons = document.querySelectorAll('.random-button');
+    buttons.forEach((button) => {
+      button.classList.remove('winter', 'spring', 'summer', 'autumn');
+      button.classList.add(theme);
+    });
   };
 
   return (

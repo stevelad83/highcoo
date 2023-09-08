@@ -11,7 +11,7 @@ export default function Home() {
   }
   return (
     <div>
-      <h2 className="home-heading">Here Haiku Here</h2>
+      <h2 className="home-heading">Wisdom lives here</h2>
       <PoemsList />
     </div>
   );

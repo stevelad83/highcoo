@@ -1,6 +1,6 @@
 import { checkError, client } from './client.js';
 
-const userId = client.auth.currentUser;
+// const userId = client.auth.currentUser;
 
 export async function getPoems() {
   const response = await client.from('poems').select();

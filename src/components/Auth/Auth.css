@@ -36,7 +36,7 @@ input:focus {
 
 .input,
 .auth > button {
-  background-color: var(--color2);
+  background-color: whitesmoke;
   border: 2px solid var(--color1);
   border-radius: 5px;
   color: var(--color1);

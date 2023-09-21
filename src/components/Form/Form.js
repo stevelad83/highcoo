@@ -24,18 +24,18 @@ export default function Form() {
   const handleRandomLineOne = async (e) => {
     e.preventDefault();
     const response = await getRandomLine('fiveLine');
-    setLineOne(response[0].fiveLine);
+    setLineOne(response.fiveLine);
   };
 
   const handleRandomLineTwo = async (e) => {
     e.preventDefault();
     const response = await getSecondRandomLine();
-    setLineTwo(response[0].sevenLine);
+    setLineTwo(response.sevenLine);
   };
   const handleRandomLineThree = async (e) => {
     e.preventDefault();
     const response = await getThirdRandomLine();
-    setLineThree(response[0].finalFive);
+    setLineThree(response.finalFive);
   };
 
   const handleCreatePoem = async (e) => {

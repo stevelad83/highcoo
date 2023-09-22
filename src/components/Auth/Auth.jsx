@@ -31,36 +31,38 @@ export default function Auth() {
 
   return (
     <div className="auth">
-      <h1>Welcome to Hi-Coo</h1>
-      <div className="sign-btns">
-        <NavLink to="/auth/sign-in">Sign In</NavLink>
-        <NavLink to="/auth/sign-up">Sign Up</NavLink>
-      </div>
-      <div className="input-form">
-        <div className="field">
-          <label>Email: </label>
-          <input
-            className="input"
-            type="email"
-            placeholder="name@example.com"
-            value={email}
-            onChange={(event) => setEmail(event.target.value)}
-          />
+      <form>
+        <h1>Welcome to Hi-Coo</h1>
+        <div className="sign-btns">
+          <NavLink to="/auth/sign-in">Sign In</NavLink>
+          <NavLink to="/auth/sign-up">Sign Up</NavLink>
         </div>
-        <div className="field">
-          <label>Password: </label>
-          <input
-            className="input"
-            type="password"
-            placeholder="********"
-            value={password}
-            onChange={(event) => setPassword(event.target.value)}
-          />
+        <div className="input-form">
+          <div className="field">
+            <label>Email: </label>
+            <input
+              className="input"
+              type="email"
+              placeholder="name@example.com"
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
+            />
+          </div>
+          <div className="field">
+            <label>Password: </label>
+            <input
+              className="input"
+              type="password"
+              placeholder="********"
+              value={password}
+              onChange={(event) => setPassword(event.target.value)}
+            />
+          </div>
         </div>
-      </div>
-      <button type="submit" onClick={submitAuth}>
-        Submit
-      </button>
+        <button type="submit" onClick={submitAuth}>
+          Submit
+        </button>
+      </form>
     </div>
   );
 }

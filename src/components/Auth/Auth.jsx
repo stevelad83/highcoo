@@ -38,9 +38,8 @@ export default function Auth() {
       </div>
       <div className="input-form">
         <div className="field">
-          <label name="email">Email: </label>
+          <label>Email: </label>
           <input
-            id="input"
             className="input"
             type="email"
             placeholder="name@example.com"
@@ -49,9 +48,8 @@ export default function Auth() {
           />
         </div>
         <div className="field">
-          <label name="password">Password: </label>
+          <label>Password: </label>
           <input
-            id="input-two"
             className="input"
             type="password"
             placeholder="********"

@@ -5,6 +5,6 @@ publish = 'build'
 
 [[redirects]]
 
-from = '/*'
+from = '/sign'
 to ='/index.html'
 status = 200
